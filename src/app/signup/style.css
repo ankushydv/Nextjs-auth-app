@@ -1,0 +1,19 @@
+/* styles.css */
+.custom-password-input {
+    position: relative;
+  }
+  
+  .custom-password-input input {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .password-display {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #000; /* Change the color as desired */
+  }
+  
