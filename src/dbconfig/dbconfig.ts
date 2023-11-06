@@ -31,10 +31,7 @@ import mongoose, { Connection } from 'mongoose';
 const MONGODB_URI: any = process.env.MONGO_URI;
 
 let cachedDb: Connection | null = null;
-// interface CustomConnectOptions extends Connection {
-//     useNewUrlParser: boolean;
-//     useUnifiedTopology: boolean;
-// }
+
 
 export const connect = async (): Promise<Connection> => {
     if (cachedDb) {
