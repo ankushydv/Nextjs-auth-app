@@ -19,16 +19,10 @@ export default function LoginPage() {
   const onLogin = async () => {
     try {
       setLoading(true);
-      //   const response = await fetch("api/users/login", {
-      //     method: "Post",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(user),
-      //   });
       const response = await axios.post("api/users/login", user);
 
       console.log("Login", response);
+      toast.success("User logged in successfully");
       router.push("/profile");
     } catch (error: any) {
       console.log("Login failed!!!", error);
