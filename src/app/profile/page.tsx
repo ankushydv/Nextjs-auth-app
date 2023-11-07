@@ -17,6 +17,18 @@ export default function ProfilePage() {
       toast.error(error.message);
     }
   };
+
+  const getUserData = async () => {
+    try {
+      const response = await axios.get("api/users/user");
+      console.log("Get user data", response.data);
+      return response.data;
+    } catch (error: any) {
+      console.log("Get user data failed!!!", error);
+      toast.error(error.message);
+    }
+  };
+  getUserData();
   return (
     <>
       <div className="flex flex-col items-center min-h-screen py-3">
